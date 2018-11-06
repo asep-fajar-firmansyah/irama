@@ -11,7 +11,7 @@
   <!--  define properties -->
   <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <spring.version>4.3.2.RELEASE</spring.version>
+        <spring.version>5.1.1.RELEASE</spring.version>
         <spring.security.core.version>3.1.4.RELEASE</spring.security.core.version>
         <junit.version>4.12</junit.version>
         <servlet.version>3.1.0</servlet.version>
@@ -100,6 +100,52 @@
 		<artifactId>commons-io</artifactId>
 		<version>2.4</version>
 	</dependency>
+	
+	<!-- from TwitterCrawler pom -->
+	<dependency>
+            <groupId>org.twitter4j</groupId>
+            <artifactId>twitter4j-core</artifactId>
+            <version>[4.0,)</version>
+    </dependency>
+
+    <dependency>
+            <groupId>org.apache.commons</groupId>
+            <artifactId>commons-collections4</artifactId>
+            <version>4.1</version>
+    </dependency>
+
+    <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <version>1.16.18</version>
+            <scope>provided</scope>
+    </dependency>
+	
+		   <!-- Json file processing --> 
+    <dependency>
+		    <groupId>com.google.code.gson</groupId>
+		    <artifactId>gson</artifactId>
+		    <version>2.3.1</version>
+	</dependency>
+		
+	<dependency>
+    		<groupId>com.googlecode.json-simple</groupId>
+    		<artifactId>json-simple</artifactId>
+    		<version>1.1.1</version>
+	</dependency>
+	<!-- End TwitterClawler pom -->	
+	<!-- https://mvnrepository.com/artifact/org.springframework.data/spring-data-mongodb -->
+	<dependency>
+    	<groupId>org.springframework.data</groupId>
+    	<artifactId>spring-data-mongodb</artifactId>
+   		<version>2.1.2.RELEASE</version>
+	</dependency>
+	<!-- https://mvnrepository.com/artifact/net.sf.jwordnet/jwnl -->
+		<dependency>
+			<groupId>net.sf.jwordnet</groupId>
+			<artifactId>jwnl</artifactId>
+			<version>1.4_rc3</version>
+		</dependency>
   </dependencies>
   <build>
   	<sourceDirectory>src/main/java</sourceDirectory>
