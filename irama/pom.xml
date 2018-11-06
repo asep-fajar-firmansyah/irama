@@ -146,6 +146,38 @@
 			<artifactId>jwnl</artifactId>
 			<version>1.4_rc3</version>
 		</dependency>
+	<dependency>
+			<groupId>edu.stanford.nlp</groupId>
+			<artifactId>stanford-corenlp</artifactId>
+			<version>3.6.0</version>
+		</dependency>
+		
+		<dependency>
+			<groupId>edu.stanford.nlp</groupId>
+			<artifactId>stanford-corenlp</artifactId>
+			<version>3.6.0</version>
+			<classifier>models</classifier>
+		</dependency>
+
+
+		<dependency>
+			<groupId>org.apache.lucene</groupId>
+			<artifactId>lucene-core</artifactId>
+			<version>6.1.0</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.apache.lucene</groupId>
+			<artifactId>lucene-analyzers-common</artifactId>
+			<version>6.1.0</version>
+		</dependency>
+
+<!-- https://mvnrepository.com/artifact/org.apache.lucene/lucene-misc -->
+<dependency>
+    <groupId>org.apache.lucene</groupId>
+    <artifactId>lucene-misc</artifactId>
+    <version>6.2.0</version>
+</dependency>
   </dependencies>
   <build>
   	<sourceDirectory>src/main/java</sourceDirectory>
