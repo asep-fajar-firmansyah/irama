@@ -16,6 +16,7 @@ import java.util.Map;
 
 /**
  * Created by alicankustemur on 29/10/2017.
+ * Modifier by Asep Fajar Firmansyah
  */
 @RestController
 @RequestMapping(value= {"/crawler"}, produces="application/json; charset=UTF-8")
@@ -27,7 +28,6 @@ public class CrawlerController {
         this.crawlTweetsAndScoringService = crawlTweetsAndScoringService;
     }
 
-   
     @GetMapping("/all-properies-tweet/{user}")
     public List<Status>  findAllPropertiesTweetCrawler(@PathVariable String user) {
        return crawlTweetsAndScoringService.findAllTweet(user) ;

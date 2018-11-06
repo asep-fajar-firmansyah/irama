@@ -16,6 +16,7 @@ import twitter4j.UserMentionEntity;
 
 /**
  * Created by alicankustemur on 06/11/2017.
+ * Modifier by Asep Fajar Firmansyah 
  */
 @Service
 public class CrawlTweetsAndScoringServiceImpl implements CrawlTweetsAndScoringService {
@@ -33,7 +34,10 @@ public class CrawlTweetsAndScoringServiceImpl implements CrawlTweetsAndScoringSe
     	List<Status> statuses = tweetService.getAllTweetsByUser(user);
     	return statuses;
     }
-    
+    /*
+     * Author : Asep Fajar Firmansyah
+     * @see com.irama.TwitterCrawler.service.CrawlTweetsAndScoringService#findAllTextTweet(java.lang.String)
+     */
     //get All Text Tweet
     public List<String> findAllTextTweet(String user){
     	List<Status> statuses = tweetService.getAllTweetsByUser(user);
@@ -45,7 +49,10 @@ public class CrawlTweetsAndScoringServiceImpl implements CrawlTweetsAndScoringSe
         }
     	return listText;
     }
-    
+    /*
+     * Author : Asep Fajar Firmansyah
+     * @see com.irama.TwitterCrawler.service.CrawlTweetsAndScoringService#findAllTextTweetTranslate(java.lang.String)
+     */
    public List<String> findAllTextTweetTranslate(String user){
     	List<Status> statuses = tweetService.getAllTweetsByUser(user);
     	Map<String,Integer> map = new HashMap<String,Integer>();

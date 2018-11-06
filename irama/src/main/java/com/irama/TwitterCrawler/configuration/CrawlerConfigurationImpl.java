@@ -6,6 +6,7 @@ import twitter4j.conf.ConfigurationBuilder;
 
 /**
  * Created by alicankustemur on 29/10/2017.
+ * Modifier by Asep Fajar FIrmansyah
  */
 @Configuration
 public class CrawlerConfigurationImpl implements CrawlerConfiguration {

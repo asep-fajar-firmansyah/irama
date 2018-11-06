@@ -21,7 +21,13 @@ import org.json.simple.parser.ParseException;
 import com.fasterxml.jackson.core.util.DefaultPrettyPrinter;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.ObjectWriter;
-
+/**
+ * Gives translations for questions and keywords using Translate Shell. 
+ * For using this class, Translate Shell must be installed. 
+ * https://github.com/soimort/translate-shell#installation
+ * Adopt from https://github.com/dice-group/QUANT
+ * Modifier by Asep Fajar Firmansyah
+ */
 public class TranslatorService {
 	private String executeCommand(String command, String lang, String text) {
 		

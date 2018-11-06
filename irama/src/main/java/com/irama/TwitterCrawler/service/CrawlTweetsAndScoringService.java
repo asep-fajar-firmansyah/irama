@@ -7,6 +7,7 @@ import twitter4j.Status;
 
 /**
  * Created by alicankustemur on 06/11/2017.
+ * Modifier by Asep Fajar Firmansyah
  */
 public interface CrawlTweetsAndScoringService {
    public List<Status> findAllTweet(String user);
