@@ -27,7 +27,10 @@ import net.didion.jwnl.data.Synset;
 import twitter4j.JSONArray;
 import twitter4j.JSONException;
 import twitter4j.JSONObject;
-
+/**
+ * @author Simone Papandrea
+ * @modifier by Asep Fajar Firmansyah
+ */
 public class SentiWordNet {
 	private static final String WORDNET_DICTIONARY_PATH = "C:\\Users\\YOGA 520\\Documents\\GitHub\\irama\\irama\\src\\main\\resources\\prop.xml";
 	private static final String SENTI_WORD_NET_PATH = "C:\\Users\\YOGA 520\\Documents\\GitHub\\irama\\irama\\src\\main\\resources\\sentiwordnet.txt";
@@ -37,7 +40,7 @@ public class SentiWordNet {
 	private Dictionary mDictionary;
 	
 	SentiWordNet() throws IOException, JWNLException {
-		loadSentiWordnet();
+		loadWordNetDictionary();
 		loadSentiWordnet();
 	}
 	private void loadWordNetDictionary() throws FileNotFoundException, JWNLException {

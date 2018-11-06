@@ -95,12 +95,14 @@ public class CrawlTweetsAndScoringServiceImpl implements CrawlTweetsAndScoringSe
     	for (Status status : statuses) {
             String userText = status.getText();
             try {
-            	if (x<1) {
+            	if (x<=3) {
 				userTextTrans = trans.translateSentence(userText);
-				userTextTrans = userTextTrans.replaceAll(",", "");
+				//userTextTrans = userTextTrans.replaceAll(",", "");
 				String text= pattern.matcher(userTextTrans).replaceAll("");
 				score = detector.detect(text);
 				scores.put(userTextTrans, score);
+            	}else {
+            		break;
             	}
 			} catch (FileNotFoundException e) {
 				// TODO Auto-generated catch block
