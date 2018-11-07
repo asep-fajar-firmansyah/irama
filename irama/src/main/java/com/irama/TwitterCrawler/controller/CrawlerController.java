@@ -3,6 +3,7 @@ package com.irama.TwitterCrawler.controller;
 import com.irama.TwitterCrawler.service.CrawlTweetsAndScoringService;
 import com.irama.TwitterCrawler.service.TweetService;
 import com.irama.TwitterCrawler.service.TweetServiceImpl;
+import com.irama.TwitterCrawler.util.Sentiment;
 
 import net.didion.jwnl.JWNLException;
 
@@ -40,13 +41,26 @@ public class CrawlerController {
        return crawlTweetsAndScoringService.findAllTextTweet(user) ;
     }
     @GetMapping("/tweet/translate/{user}")
-    public List<String>  getAllTextTweetTranslateCrawler(@PathVariable String user) {
+    public Map<String, String>  getAllTextTweetTranslateCrawler(@PathVariable String user) {
        return crawlTweetsAndScoringService.findAllTextTweetTranslate(user) ;
     }
     @GetMapping("/tweet/score/{user}")
-    public Map<String, Double>  getAllScoreTweetTranslateCrawler(@PathVariable String user) {
+    public Map<String, Sentiment>  getAllScoreTweetTranslateCrawler(@PathVariable String user) {
        try {
 		return crawlTweetsAndScoringService.findScore(user) ;
+       } catch (IOException e) {
+		// TODO Auto-generated catch block
+		e.printStackTrace();
+       } catch (JWNLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+	   }
+       return null;
+    }
+    @GetMapping("/tweet/sentiment-summary/{user}")
+    public Map<String, Integer>  getAllPersonalSentimentSummaryOfTweetTranslateCrawler(@PathVariable String user) {
+       try {
+		return crawlTweetsAndScoringService.findPersonalSentimentSummary(user) ;
        } catch (IOException e) {
 		// TODO Auto-generated catch block
 		e.printStackTrace();

@@ -5,5 +5,5 @@ package com.irama.TwitterCrawler.util;
  *
  */
 public enum Sentiment {
-	SUPPORTER, OPPONENT, NEUTRAL;
+	POSITIVE, NEGATIVE, NEUTRAL;
 }
