@@ -70,5 +70,18 @@ public class CrawlerController {
 	   }
        return null;
     }
+    @GetMapping("/tweet/sentiment-text/{text}")
+    public Map<String, String>  getSentimentText(@PathVariable String text) {
+       try {
+		return crawlTweetsAndScoringService.findSentimen(text) ;
+       } catch (IOException e) {
+		// TODO Auto-generated catch block
+		e.printStackTrace();
+       } catch (JWNLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+	   }
+       return null;
+    }
 }
 

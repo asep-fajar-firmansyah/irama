@@ -19,5 +19,6 @@ public interface CrawlTweetsAndScoringService {
    public Map<String, String> findAllTextTweetTranslate(String user);
    public Map<String, Sentiment> findScore(String user) throws IOException, JWNLException; 
    public Map<String, Integer> findPersonalSentimentSummary(String user) throws IOException, JWNLException;
+   public Map<String, String> findSentimen(String sentences) throws IOException, JWNLException;
 }
 

@@ -34,6 +34,25 @@ public class CrawlerServiceImpl implements CrawlerService {
         Paging page = new Paging(pageNumber, 100);
         return createTwitter().getUserTimeline(user, page);
     }
+    
+    @Override
+    public List<Status> getTweetsByQuery(Query query, int pageNumber) throws TwitterException {
+        Paging page = new Paging(pageNumber, 100);
+        List<Status> tweets = null;
+        try {
+            QueryResult result;
+            do {
+                result = createTwitter().search(query);
+                tweets = result.getTweets();
+            } while ((query = result.nextQuery()) != null);
+            System.exit(0);
+        } catch (TwitterException te) {
+            te.printStackTrace();
+            System.out.println("Failed to search tweets: " + te.getMessage());
+            System.exit(-1);
+        }
+        return tweets;
+    }
 
 
 }
