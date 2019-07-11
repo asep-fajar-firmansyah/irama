@@ -20,10 +20,10 @@ public class CrawlerConfigurationImpl implements CrawlerConfiguration {
     public ConfigurationBuilder getConfigurationBuilder() {
         return new ConfigurationBuilder()
                 .setDebugEnabled(true)
-                .setOAuthConsumerKey("z6o0LjqUZ98ybdCn0iNl730dU")
-                .setOAuthConsumerSecret("J5BwuC44n8WlglrI8cFSS1buJR6Wia6Z8SEDEKOB33fpQxYVR4")
-                .setOAuthAccessToken("3043604459-EFULmG2HmsrT8rILQolRiF1YB7jKSuVSRKEskBi")
-                .setOAuthAccessTokenSecret("c2PmC9hJ6HlKEo4ijC2YZrN0qAMscjl6LVhP6mae7weyN");
+                .setOAuthConsumerKey("YOUR_CONSUMER_KEY")
+                .setOAuthConsumerSecret("YOUR_CONSUMER_SECRET")
+                .setOAuthAccessToken("YOUR_ACCESS_TOKEN")
+                .setOAuthAccessTokenSecret("YOUR_ACCESS_TOKEN_SECRET");
     }
 
 }
