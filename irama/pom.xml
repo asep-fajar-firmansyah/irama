@@ -16,7 +16,7 @@
         <junit.version>4.12</junit.version>
         <servlet.version>3.1.0</servlet.version>
         <servlet.version>3.0.1</servlet.version>
-        <jackson.library>2.9.5</jackson.library>
+        <jackson.library>2.13.4.1</jackson.library>
         <jena.version>3.0.0</jena.version>
         <java-rdfa.version>0.4.2</java-rdfa.version>
   </properties>
